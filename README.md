@@ -2,7 +2,7 @@
 
 This project demonstrates how to build a **local MCP (Model Context Protocol) client** using LlamaIndex that connects to a local PostgreSQL database. The agent can interact with the database using natural language, powered by a local LLM (Ollama) and a tool-calling agent.
 
-![Architecture](https://i.imgur.com/your-architecture-diagram.png) 
+![Architecture](userflow.png)
 
 ### Tech Stack
 - **LlamaIndex**: Framework for building context-aware LLM applications.
