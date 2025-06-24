@@ -16,7 +16,11 @@ This project demonstrates how to build a **local MCP (Model Context Protocol) cl
 ### Setup
 
 1.  **Install Dependencies**:
-    Make sure you have `uv` installed. Then, sync the dependencies:
+    Make sure you have `uv` installed. If not, run the following command:
+    ```sh
+    python -m pip install uv
+    ```
+    Then, sync the dependencies:
     ```sh
     uv sync
     ```
@@ -33,14 +37,14 @@ This project demonstrates how to build a **local MCP (Model Context Protocol) cl
 1.  **Start the MCP Server**:
     Open a terminal and run the server. It will automatically create the `people` table in your database.
     ```sh
-    uv run server.py --server_type=sse
+    python -m uv run server.py --server_type=sse
     ```
     The server will be running on `http://127.0.0.1:8000`.
 
 2.  **Run the Client**:
     Open a second terminal and run the client:
     ```sh
-    uv run client.py
+    python -m uv run client.py
     ```
 
 3.  **Interact with the Agent**:

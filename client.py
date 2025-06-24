@@ -28,20 +28,24 @@ async def main():
     except Exception as e:
         print(f"❌ Could not connect to MCP server: {e}")
         print("🔧 Please start the PostgreSQL server first: uv run server.py --server_type=sse")
-        return
-
-    # Define the system prompt
+        return    # Define the system prompt
     SYSTEM_PROMPT = """\
 You are an AI assistant that works with a PostgreSQL database.
 
 Your task is to understand user requests, and use the available tools to perform database operations.
 When a user asks for an action (e.g., adding, reading, or querying data), you must select the appropriate tool, call it with the necessary parameters, and report the result to the user.
-DO NOT output JSON. Always call the tool and report the result as plain text.
+
+IMPORTANT RULES:
+1. When user asks to add multiple people (e.g., "add 3 people", "add 5 random Turkish people"), you MUST call the `add_person` tool multiple times - once for each person.
+2. Generate diverse, realistic names, ages, and professions for each person.
+3. For Turkish names, use authentic Turkish first and last names.
+4. DO NOT output JSON. Always call the tool and report the result as plain text.
+5. Complete ALL requested operations before responding.
 
 Example Flow:
-User: "Add 5 new people"
-You: (Secretly call the `add_data` tool)
-You: "5 new people were successfully added."
+User: "Add 3 random Turkish people"
+You: (Call `add_person` tool 3 times with different Turkish names, ages, and professions)
+You: "Successfully added 3 Turkish people to the database."
 
 Available Tools: `add_data`, `add_person`, `read_data`, `get_table_info`.
 
