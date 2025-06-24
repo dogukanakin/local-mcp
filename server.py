@@ -1,6 +1,7 @@
 import psycopg2
 import argparse
 import os
+import random
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP('postgresql-demo')
@@ -11,7 +12,7 @@ DB_CONFIG = {
     'port': 5432,
     'database': 'mcp_example',
     'user': 'postgres',
-    'password': 'postgres'
+    'password': 'pumapuma'
 }
 
 def init_db():
@@ -217,4 +218,4 @@ if __name__ == "__main__":
     )
 
     args = parser.parse_args()
-    mcp.run(args.server_type) 
+    mcp.run(args.server_type)
