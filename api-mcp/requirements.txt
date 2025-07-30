@@ -1,0 +1,33 @@
+# API MCP Project Dependencies
+
+# Core MCP and FastMCP
+mcp>=1.0.0
+fastmcp>=0.9.0
+
+# FastAPI and web dependencies
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.5.0
+
+# HTTP client for API requests
+httpx>=0.25.0
+
+# LlamaIndex and Ollama for AI functionality
+llama-index>=0.9.0
+llama-index-llms-ollama>=0.1.0
+llama-index-tools-mcp>=0.1.0
+
+# Async utilities
+nest-asyncio>=1.5.0
+
+# Optional development dependencies
+# Uncomment if you want to use them:
+# pytest>=7.4.0
+# pytest-asyncio>=0.21.0
+# black>=23.0.0
+# isort>=5.12.0
+# mypy>=1.7.0
+
+# Additional utilities that might be useful
+python-dateutil>=2.8.0
+typing-extensions>=4.8.0
