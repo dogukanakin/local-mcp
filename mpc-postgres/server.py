@@ -11,7 +11,7 @@ DB_CONFIG = {
     'port': 5432,
     'database': 'mcp_example',
     'user': 'postgres',
-    'password': 'postgres'
+    'password': 'pumapuma'
 }
 
 def init_db():
